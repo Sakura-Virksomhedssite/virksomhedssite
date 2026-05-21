@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: radial-gradient(circle at 12% 14%, var(--accent-soft), transparent 24%), radial-gradient(circle at 88% 16%, var(--accent-warm-soft), transparent 20%), linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* nav css */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(16, 9, 4, 0.94), rgba(16, 9, 4, 0.6));
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(242, 179, 107, 0.12);
+}
+.site-nav,
+.content-block,
+.feature,
+.gallery,
+.site-footer__inner {
+  width: min(100% - 2rem, 74rem);
+  margin-inline: auto;
+}
+
+.site-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  min-height: 5.3rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.brand img {
+  width: 3.2rem;
+  height: auto;
+  max-height: 3rem;
+  object-fit: contain;
+}
+
+.brand__text {
+  display: grid;
+  gap: 0.08rem;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-left: auto;
+}
