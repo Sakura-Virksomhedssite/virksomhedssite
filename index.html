@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <title>Nørrebro Posthus</title>
   </head>
 
   <body>
     <header class="site-header">
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Hovedmenu">
         <a href="anchor">
-          <img src="img/logo-nbph.png" alt="Nørrebro Posthus logo" />
-          <span class="brand_text">
+          <img src="img/logo-nbph.png" alt="Posthuslogo" />
+
+          <!-- <span class="brand_text">
             <strong>Nørrebro</strong>
             <span>Posthus</span>
-          </span>
+          </span> -->
         </a>
 
         <div class="nav-menu" id="nav-menu">
@@ -31,19 +33,58 @@
           <a href="#guide">Sådan virker det</a>
           <a href="#help">Kontakt</a>
         </div>
+
+        <!-- nav btns (burger and darkmode) -->
+
+        <div class="nav-controls">
+          <!-- darkmode -->
+
+          <!-- <button id="theme-toggle" class="theme-switch" type="button" role="switch" aria-checked="true" aria-label="Skift til lys tilstand" data-tooltip="light mode">
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-icon theme-switch-icon--moon">☾</span>
+              <span class="theme-switch-icon theme-switch-icon--sun">☀</span>
+              <span class="theme-switch-thumb"></span>
+            </span>
+            <span class="theme-switch-text visually-hidden">Lys</span>
+          </button> -->
+          <!-- burger -->
+          <button class="burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Åbn menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
         <div class="sub-hero">
-          <div>
-            <p>Pakkeshop</p>
+          <div class="reveal">
+            <p class="eyebrow">Pakkeshop</p>
             <h1>Nørrebro Posthus</h1>
-            <p class="hero-info">Her finder du information om adresse, åbningstider, leverandører og kontaktoplysninger for Nørrebro Posthus.</p>
+            <p class="hero__lead">Her finder du information om adresse, åbningstider, leverandører og kontaktoplysninger for Nørrebro Posthus.</p>
+
+            <div class="hero__details" aria-label="Nøgleinformation">
+              <p>Nørrebrogade 166</p>
+              <p>2200 København N</p>
+              <p>PostNord, DHL, DAO, Bring og UPS</p>
+            </div>
+
+            <div class="hero__actions">
+              <a class="button" href="#hours">Se åbningstider</a>
+              <a class="button button--ghost" href="#location-map">Find os</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
   </body>
+
+  <script src="js/main.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/reveal.js"></script>
 </html>

@@ -17,6 +17,26 @@
   --shadow: 0 18px 42px rgba(46, 25, 9, 0.12);
 }
 
+:root [data-theme="dark"] {
+  --font-sans: "Alumni Sans", "Helvetica Neue", Arial, sans-serif;
+  --bg: #110b07;
+  --bg-soft: #24170e;
+  --surface: rgba(255, 247, 239, 0.06);
+  --surface-strong: rgba(255, 247, 239, 0.1);
+  --text: #fbf1e7;
+  --muted: rgba(251, 241, 231, 0.8);
+  --accent: #f2b36b;
+  --accent-strong: #df8d3d;
+  --accent-soft: rgba(242, 179, 107, 0.18);
+  --accent-warm: #f4a45d;
+  --accent-warm-strong: #d9782a;
+  --accent-warm-soft: rgba(244, 164, 93, 0.2);
+  --accent-contrast: #1b1009;
+  --line: rgba(242, 179, 107, 0.18);
+  --shadow: 0 22px 54px rgba(10, 5, 2, 0.36);
+  --radius: 5px;
+}
+
 :root[data-theme="light"] .site-header {
   background: linear-gradient(180deg, rgba(251, 243, 232, 0.96), rgba(251, 243, 232, 0.74));
   border-bottom-color: rgba(88, 49, 18, 0.08);
@@ -28,4 +48,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: radial-gradient(circle at 12% 14%, var(--accent-soft), transparent 24%), radial-gradient(circle at 88% 16%, var(--accent-warm-soft), transparent 20%), linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
 }
