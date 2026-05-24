@@ -21,3 +21,21 @@
   font-weight: 100 900;
   font-display: swap;
 }
+
+/* fonts for all */
+
+.brand__text strong,
+h1,
+h2,
+h3,
+.subheading,
+.nav-menu a,
+.theme-switch-text,
+.site-footer li {
+  font-family: var(--font-sans);
+}
+
+.about-card__overlay h3 {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  line-height: 1;
+}

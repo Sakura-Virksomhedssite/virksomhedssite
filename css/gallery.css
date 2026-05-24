@@ -1,0 +1,93 @@
+.provider-grid,
+.info-steps,
+.help-grid,
+.about-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.provider-card,
+.gallery-card,
+.feature__media,
+.feature__copy,
+.help-card,
+.about-card,
+.info-card,
+.site-footer__inner > div {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.provider-card,
+.help-card,
+.about-card,
+.feature__copy,
+.site-footer__inner > div {
+  padding: 1.25rem;
+}
+
+.about-grid {
+  align-items: stretch;
+}
+
+.about-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.about-card--media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.about-card--media img {
+  width: 100%;
+  height: 100%;
+  min-height: 22rem;
+  object-fit: cover;
+}
+
+.about-card__overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(calc(100% - 2rem), 22rem);
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius);
+  border: 1px solid rgba(224, 151, 63, 0.32);
+  background: linear-gradient(180deg, rgba(18, 10, 5, 0.56), rgba(43, 25, 12, 0.66));
+  color: #fbf1e7;
+  text-align: center;
+  justify-items: center;
+  opacity: 0.78;
+  box-shadow: 0 10px 24px rgba(12, 6, 3, 0.16);
+  backdrop-filter: blur(4px);
+  transition:
+    opacity 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* card hover */
+
+.about-card--media:hover .about-card__overlay,
+.about-card--media:focus-within .about-card__overlay {
+  opacity: 1;
+  border-color: rgba(224, 151, 63, 0.48);
+  background: linear-gradient(180deg, rgba(18, 10, 5, 0.84), rgba(43, 25, 12, 0.9));
+  box-shadow: 0 16px 34px rgba(12, 6, 3, 0.26);
+}
+
+.about-card__overlay h3,
+.about-card__overlay p {
+  margin: 0;
+}
+
+/* MERE GALLERY */
