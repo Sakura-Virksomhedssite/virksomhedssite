@@ -140,6 +140,22 @@ h3,
     border-color 180ms ease;
 }
 
+/* nav hover */
+.nav-menu a:hover,
+.nav-menu a:focus-visible,
+.button:hover,
+.button:focus-visible,
+.gallery-card:hover,
+.provider-card:hover {
+  transform: translateY(-2px);
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+  background: #bc5406;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
 /* hero section */
 
 .hero {
