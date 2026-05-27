@@ -1,7 +1,8 @@
 .provider-grid,
 .info-steps,
 .help-grid,
-.about-grid {
+.about-grid,
+.quick-link-grid {
   display: grid;
   gap: 1rem;
 }
@@ -33,6 +34,47 @@
 .about-card {
   border: 1px solid var(--line);
   background: var(--surface);
+}
+
+.quick-link-grid {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.quick-link-card {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 8rem;
+  padding: 1.25rem;
+  align-content: end;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.quick-link-card:hover,
+.quick-link-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(244, 164, 93, 0.45);
+  background: var(--surface-strong);
+}
+
+.quick-link-card span {
+  color: var(--accent-warm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.quick-link-card strong {
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1.05;
 }
 
 .about-card--media {
@@ -91,3 +133,12 @@
 }
 
 /* MERE GALLERY */
+
+.info-steps .gallery-card {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
